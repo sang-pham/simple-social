@@ -104,3 +104,6 @@ db.sqlite3
 .idea
 .DS_Store
 .DS_STORE
+
+cert.crt
+cert.key

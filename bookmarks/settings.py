@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)3_8n$z2jy!h08r@n_wuw!q0qot9_^ly_3as&=2s&u!v^4-57b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysitexd.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +116,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2'
 ]
 
 MEDIA_URL = '/media/'
@@ -137,3 +141,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '3088973931422712'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'd3d0c166ff8043a4e3e5ef6a538faf01'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '537618369026-od8nb85l26p6t0u133d47eandakncahg.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
