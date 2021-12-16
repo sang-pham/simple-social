@@ -5,6 +5,7 @@ from django.urls import reverse
 
 
 class Image(models.Model):
+    id = models.AutoField(primary_key=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              related_name='images_created',
                              on_delete=models.CASCADE)
